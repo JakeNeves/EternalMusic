@@ -1,2 +1,2 @@
-# EternalMusic
-Music Mod for Eternal
+# Eternal (Music Addon)
+Music Addon Mod for Eternal

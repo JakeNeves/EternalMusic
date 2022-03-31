@@ -4,4 +4,4 @@ version = 1.0.8
 homepage = https://discord.gg/HUJ8KUSAjC
 includeSource = true
 includePDB = true
-modReferences = Eternal@1.0.8
+modReferences = Eternal

@@ -1,4 +1,13 @@
 using Eternal;
+using Eternal.NPCs.Boss.AoI;
+using Eternal.NPCs.Boss.BionicBosses;
+using Eternal.NPCs.Boss.BionicBosses.Omnicron;
+using Eternal.NPCs.Boss.CarmaniteScouter;
+using Eternal.NPCs.Boss.CosmicApparition;
+using Eternal.NPCs.Boss.CosmicEmperor;
+using Eternal.NPCs.Boss.Dunekeeper;
+using Eternal.NPCs.Boss.Incinerius;
+using Eternal.NPCs.Boss.InfernoGuardian;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -69,7 +78,7 @@ namespace EternalMusic
 
 			if (Main.LocalPlayer.GetModPlayer<EternalPlayer>().ZoneCommet)
 			{
-				if (!ModContent.GetInstance<EternalConfig>().originalMusic)
+				if (!ModContent.GetInstance<EternalMusicConfig>().originalMusic)
 				{
 					music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/AstralDiscovery");
 					priority = MusicPriority.BiomeMedium;
@@ -83,7 +92,7 @@ namespace EternalMusic
 
 			if (Main.LocalPlayer.GetModPlayer<EternalPlayer>().ZoneLabrynth)
 			{
-				if (!ModContent.GetInstance<EternalConfig>().originalMusic)
+				if (!ModContent.GetInstance<EternalMusicConfig>().originalMusic)
 				{
 					music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/ImperiousShrine");
 					priority = MusicPriority.BiomeMedium;
@@ -97,7 +106,7 @@ namespace EternalMusic
 
 			if (Main.LocalPlayer.GetModPlayer<EternalPlayer>().ZoneBeneath)
 			{
-				if (!ModContent.GetInstance<EternalConfig>().originalMusic)
+				if (!ModContent.GetInstance<EternalMusicConfig>().originalMusic)
 				{
 					music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/DarknessFromDeepBelow");
 					priority = MusicPriority.BiomeMedium;
@@ -117,7 +126,7 @@ namespace EternalMusic
 			#endregion
 
 			#region Vanilla Music Replacement
-			if (ModContent.GetInstance<EternalConfig>().replaceVanillaMusic)
+			if (ModContent.GetInstance<EternalMusicConfig>().replaceVanillaMusic)
 			{
 				if (Main.musicVolume != 0)
 				{
@@ -196,6 +205,68 @@ namespace EternalMusic
 			}
 			#endregion
 
+			#region Boss Music
+			if (NPC.AnyNPCs(ModContent.NPCType<Atlas>()) || NPC.AnyNPCs(ModContent.NPCType<Borealis>()) || NPC.AnyNPCs(ModContent.NPCType<Omnicron>()) || NPC.AnyNPCs(ModContent.NPCType<Orion>()) || NPC.AnyNPCs(ModContent.NPCType<Photon>()) || NPC.AnyNPCs(ModContent.NPCType<Proton>()) || NPC.AnyNPCs(ModContent.NPCType<Polarus>()) || NPC.AnyNPCs(ModContent.NPCType<Quasar>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/ExoMenace");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<AtlasNeox>()) || NPC.AnyNPCs(ModContent.NPCType<BorealisNeox>()) || NPC.AnyNPCs(ModContent.NPCType<OmnicronNeox>()) || NPC.AnyNPCs(ModContent.NPCType<OrionNeox>()) || NPC.AnyNPCs(ModContent.NPCType<PhotonNeox>()) || NPC.AnyNPCs(ModContent.NPCType<ProtonNeox>()) || NPC.AnyNPCs(ModContent.NPCType<PolarusNeox>()) || NPC.AnyNPCs(ModContent.NPCType<QuasarNeox>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/NeoxPower");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<ArkofImperious>()))
+            {
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/ImperiousStrike");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<CosmicApparition>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/ApparitionalAccumulation");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<CarmaniteScouter>()) || NPC.AnyNPCs(ModContent.NPCType<InfernoGuardian>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/UnfatefulStrike");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<Dunekeeper>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/DunesWrath");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<Incinerius>()) || NPC.AnyNPCs(ModContent.NPCType<TrueIncinerius>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/PyroneticPurgatory");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<CosmicEmperorMask>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/JourneysConquest");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<CosmicEmperor>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/PlayingPuny");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<CosmicEmperorP3>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/VisionofTerminus");
+				priority = MusicPriority.BossHigh;
+			}
+			#endregion
+
 		}
-	}
+    }
 }
