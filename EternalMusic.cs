@@ -8,6 +8,7 @@ using Eternal.NPCs.Boss.CosmicEmperor;
 using Eternal.NPCs.Boss.Dunekeeper;
 using Eternal.NPCs.Boss.Incinerius;
 using Eternal.NPCs.Boss.InfernoGuardian;
+using Eternal.NPCs.Invasion.MechanicalEnvy;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -68,6 +69,14 @@ namespace EternalMusic
 			{
 				return;
 			}
+
+			#region Invasion Music
+			if (Main.invasionX == Main.spawnTileX)
+			{
+				if (EternalWorld.mechanicalEnvyUp)
+					music = GetSoundSlot(SoundType.Music, "Sounds/Music/MechanicalEnvy");
+			}
+			#endregion
 
 			#region Modded Music
 			if (Main.LocalPlayer.GetModPlayer<EternalPlayer>().ZoneThunderduneBiome)
@@ -221,6 +230,12 @@ namespace EternalMusic
 			if (NPC.AnyNPCs(ModContent.NPCType<ArkofImperious>()))
             {
 				music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/ImperiousStrike");
+				priority = MusicPriority.BossHigh;
+			}
+
+			if (NPC.AnyNPCs(ModContent.NPCType<MegaCuboidWardingDrone>()))
+			{
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/MechanicalEnvy");
 				priority = MusicPriority.BossHigh;
 			}
 
