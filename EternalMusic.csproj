@@ -15,7 +15,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Eternal">
-      <HintPath>..\..\references\mods\Eternal.XNA.dll</HintPath>
+      <HintPath>..\..\references\mods\Eternal_v1.0.8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Eternal">
+      <HintPath>..\..\references\mods\Eternal_v1.0.8.1.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

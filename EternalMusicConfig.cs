@@ -18,7 +18,7 @@ namespace EternalMusic
         [SeparatePage]
         [Header("Music Configuration")]
         [DefaultValue(false)]
-        [Label("Old Eternal Soundtrack")]
+        [Label("Old Eternal Soundtrack [c/008060:(NYI)]")]
         [BackgroundColor(71, 245, 169)]
         [Tooltip("Determines when to use the old soundtrack over the new soundtrack...\n(Default: Off)")]
         public bool originalMusic = false;

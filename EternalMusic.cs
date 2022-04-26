@@ -1,7 +1,7 @@
 using Eternal;
 using Eternal.NPCs.Boss.AoI;
 using Eternal.NPCs.Boss.BionicBosses;
-using Eternal.NPCs.Boss.BionicBosses.Omnicron;
+using Eternal.NPCs.Boss.BionicBosses.Omicron;
 using Eternal.NPCs.Boss.CarmaniteScouter;
 using Eternal.NPCs.Boss.CosmicApparition;
 using Eternal.NPCs.Boss.CosmicEmperor;
@@ -29,21 +29,10 @@ namespace EternalMusic
 			instance = this;
 
 			#region Music Boxes
-			if (!ModContent.GetInstance<EternalMusicConfig>().originalMusic)
-			{
-				AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/New/ImperiousShrine"), ItemType("LabrynthMusicBox"), TileType("LabrynthMusicBox"));
-				AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/New/PyroneticPurgatory"), ItemType("IncineriusMusicBox"), TileType("IncineriusMusicBox"));
-				AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/New/DarknessFromDeepBelow"), ItemType("BeneathMusicBox"), TileType("BeneathMusicBox"));
-				AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/New/ImperiousStrike"), ItemType("AoIMusicBox"), TileType("AoIMusicBox"));
-			}
-			else
-			{
-				AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/MazesAndLivingSwords"), ItemType("LabrynthMusicBox"), TileType("LabrynthMusicBox"));
-				AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/DeepDark"), ItemType("BeneathMusicBox"), TileType("BeneathMusicBox"));
-				AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/FieryBattler"), ItemType("IncineriusMusicBox"), TileType("IncineriusMusicBox"));
-				AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/BladeofBrutality"), ItemType("AoIMusicBox"), TileType("AoIMusicBox"));
-			}
-
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/ImperiousShrine"), ItemType("LabrynthMusicBox"), TileType("LabrynthMusicBox"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/PyroneticPurgatory"), ItemType("IncineriusMusicBox"), TileType("IncineriusMusicBox"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/DarknessFromDeepBelow"), ItemType("BeneathMusicBox"), TileType("BeneathMusicBox"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/ImperiousStrike"), ItemType("AoIMusicBox"), TileType("AoIMusicBox"));
 
 			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/DunesWrath"), ItemType("DunekeeperMusicBox"), TileType("DunekeeperMusicBox"));
 
@@ -89,7 +78,7 @@ namespace EternalMusic
 			{
 				if (!ModContent.GetInstance<EternalMusicConfig>().originalMusic)
 				{
-					music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/AstralDiscovery");
+					music = GetSoundSlot(SoundType.Music, "Sounds/Music/AstralDiscovery");
 					priority = MusicPriority.BiomeMedium;
 				}
 				else
@@ -103,7 +92,7 @@ namespace EternalMusic
 			{
 				if (!ModContent.GetInstance<EternalMusicConfig>().originalMusic)
 				{
-					music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/ImperiousShrine");
+					music = GetSoundSlot(SoundType.Music, "Sounds/Music/ImperiousShrine");
 					priority = MusicPriority.BiomeMedium;
 				}
 				else
@@ -117,7 +106,7 @@ namespace EternalMusic
 			{
 				if (!ModContent.GetInstance<EternalMusicConfig>().originalMusic)
 				{
-					music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/DarknessFromDeepBelow");
+					music = GetSoundSlot(SoundType.Music, "Sounds/Music/DarknessFromDeepBelow");
 					priority = MusicPriority.BiomeMedium;
 				}
 				else
@@ -127,11 +116,11 @@ namespace EternalMusic
 				}
 			}
 
-			if (Main.LocalPlayer.GetModPlayer<EternalPlayer>().ZoneAshpit)
+			/*if (Main.LocalPlayer.GetModPlayer<EternalPlayer>().ZoneAshpit)
 			{
 				music = GetSoundSlot(SoundType.Music, "Sounds/Music/AshFields");
 				priority = MusicPriority.BiomeMedium;
-			}
+			}*/
 			#endregion
 
 			#region Vanilla Music Replacement
@@ -215,13 +204,13 @@ namespace EternalMusic
 			#endregion
 
 			#region Boss Music
-			if (NPC.AnyNPCs(ModContent.NPCType<Atlas>()) || NPC.AnyNPCs(ModContent.NPCType<Borealis>()) || NPC.AnyNPCs(ModContent.NPCType<Omnicron>()) || NPC.AnyNPCs(ModContent.NPCType<Orion>()) || NPC.AnyNPCs(ModContent.NPCType<Photon>()) || NPC.AnyNPCs(ModContent.NPCType<Proton>()) || NPC.AnyNPCs(ModContent.NPCType<Polarus>()) || NPC.AnyNPCs(ModContent.NPCType<Quasar>()))
+			if (NPC.AnyNPCs(ModContent.NPCType<Atlas>()) || NPC.AnyNPCs(ModContent.NPCType<Borealis>()) || NPC.AnyNPCs(ModContent.NPCType<Omicron>()) || NPC.AnyNPCs(ModContent.NPCType<Orion>()) || NPC.AnyNPCs(ModContent.NPCType<Photon>()) || NPC.AnyNPCs(ModContent.NPCType<Proton>()) || NPC.AnyNPCs(ModContent.NPCType<Polarus>()) || NPC.AnyNPCs(ModContent.NPCType<Quasar>()))
 			{
 				music = GetSoundSlot(SoundType.Music, "Sounds/Music/ExoMenace");
 				priority = MusicPriority.BossHigh;
 			}
 
-			if (NPC.AnyNPCs(ModContent.NPCType<AtlasNeox>()) || NPC.AnyNPCs(ModContent.NPCType<BorealisNeox>()) || NPC.AnyNPCs(ModContent.NPCType<OmnicronNeox>()) || NPC.AnyNPCs(ModContent.NPCType<OrionNeox>()) || NPC.AnyNPCs(ModContent.NPCType<PhotonNeox>()) || NPC.AnyNPCs(ModContent.NPCType<ProtonNeox>()) || NPC.AnyNPCs(ModContent.NPCType<PolarusNeox>()) || NPC.AnyNPCs(ModContent.NPCType<QuasarNeox>()))
+			if (NPC.AnyNPCs(ModContent.NPCType<AtlasNeox>()) || NPC.AnyNPCs(ModContent.NPCType<BorealisNeox>()) || NPC.AnyNPCs(ModContent.NPCType<OmicronNeox>()) || NPC.AnyNPCs(ModContent.NPCType<OrionNeox>()) || NPC.AnyNPCs(ModContent.NPCType<PhotonNeox>()) || NPC.AnyNPCs(ModContent.NPCType<ProtonNeox>()) || NPC.AnyNPCs(ModContent.NPCType<PolarusNeox>()) || NPC.AnyNPCs(ModContent.NPCType<QuasarNeox>()))
 			{
 				music = GetSoundSlot(SoundType.Music, "Sounds/Music/NeoxPower");
 				priority = MusicPriority.BossHigh;
@@ -229,7 +218,7 @@ namespace EternalMusic
 
 			if (NPC.AnyNPCs(ModContent.NPCType<ArkofImperious>()))
             {
-				music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/ImperiousStrike");
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/ImperiousStrike");
 				priority = MusicPriority.BossHigh;
 			}
 
@@ -259,7 +248,7 @@ namespace EternalMusic
 
 			if (NPC.AnyNPCs(ModContent.NPCType<Incinerius>()) || NPC.AnyNPCs(ModContent.NPCType<TrueIncinerius>()))
 			{
-				music = GetSoundSlot(SoundType.Music, "Sounds/Music/New/PyroneticPurgatory");
+				music = GetSoundSlot(SoundType.Music, "Sounds/Music/PyroneticPurgatory");
 				priority = MusicPriority.BossHigh;
 			}
 
