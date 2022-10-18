@@ -1,7 +1,9 @@
-displayName = [c/ED0249:Eternal] (Music Addon)
+displayName = [c/ED0249:Eternal Music Addon]
 author = JakeTEM
-version = 1.0.8
+version = 1.0.9
 homepage = https://discord.gg/HUJ8KUSAjC
+hideResources = false
 includeSource = true
 includePDB = true
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, Old\*
 modReferences = Eternal

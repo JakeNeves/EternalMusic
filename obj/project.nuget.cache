@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nzZLzgF31+UcFnx2WHS56wsYu8fw78JE6Pxg2reZMA/gA4ignJSXB3XC2nMYj9+g9zPvxApl9RlOOz60cXXi8A==",
+  "dgSpecHash": "Z3Mj6m34UDu6p+aiagTaF2dO/7Do9T+aV8biDU/Z8HIr3GTZByW+j3p86KhDJOB6SF7cuSkLDOQaeGwZkmu7lQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jaken\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\EternalMusic\\EternalMusic.csproj",
+  "projectFilePath": "C:\\Users\\jaken\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EternalMusic\\EternalMusic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jaken\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],

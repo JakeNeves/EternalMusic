@@ -1,3 +1,5 @@
-[c/1EC9E3:Eternal] (Music Addon) - By [c/008CFF:Jake][c/0204CFF:TEM]!
+[c/1EC9E3:Eternal Music Addon] (Alpha) - By [c/008CFF:Jake][c/0204CFF:TEM]!
 
-This is the music addon for the Eternal mod, download the Eternal mod itself to use this mod.
+1.0.9  - [c/009933:Alpha]
+
+This is the music addon mod for Eternal
