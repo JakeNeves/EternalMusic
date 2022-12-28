@@ -12,7 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Eternal">
-      <HintPath>..\Mod Libraries\Eternal.dll</HintPath>
+      <HintPath>..\ModAssemblies\Eternal_v1.0.9.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

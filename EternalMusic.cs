@@ -13,7 +13,7 @@ namespace EternalMusic
 			AddContent(new BossMusicEffect("ApparitionalAccumulation", ModContent.NPCType<Eternal.Content.NPCs.Boss.CosmicApparition.CosmicApparition>()));
 			AddContent(new BossMusicEffect("ImperiousStrike", ModContent.NPCType<Eternal.Content.NPCs.Boss.AoI.ArkofImperious>()));
 
-			AddContent(new BossMusicEffect("NeoxPower", ModContent.NPCType<Eternal.Content.NPCs.Boss.NeoxMechs.Atlas>(), ModContent.NPCType<Eternal.Content.NPCs.Boss.NeoxMechs.Polarus>()));
+			AddContent(new BossMusicEffect("NeoxPower", ModContent.NPCType<Eternal.Content.NPCs.Boss.NeoxMechs.Atlas>(), ModContent.NPCType<Eternal.Content.NPCs.Boss.NeoxMechs.Polarus>(), ModContent.NPCType<Eternal.Content.NPCs.Boss.NeoxMechs.Orion>()));
 		}
 	}
 }
