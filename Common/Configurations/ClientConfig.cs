@@ -10,6 +10,12 @@ namespace EternalMusic.Common.Configurations
     {
         public override ConfigScope Mode => ConfigScope.ClientSide;
 
+        [Label("Replace Vanilla Music")]
+        [Tooltip("Replaces Vanilla Music with the Eternal Mod Soundtrack\n(Dafault: Off)")]
+        public bool vanillaMusicReplace = false;
+
+        [SeparatePage]
+        [Header("Music Priorities")]
         [Label("Boss Music Priority")]
         [Tooltip("This determines the priority of this mod's boss music overrides.\nThe lowest values prevent the music override from being applied, while high values will make the overrides take full priority.")]
         [DefaultValue(MusicConfig.OverrideBosses)]
